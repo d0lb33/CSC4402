@@ -1,7 +1,8 @@
-﻿## CSC4402 Project
+﻿## CSC 4402 Project
 ### By: Jonathan Dolbee, Ryan Bourdais, Christian Cox
 -------------
-  
+
+## Instructions:
 
 1.  The CSC4402 project is a group project. The students should form groups each of which consists of **4 to 5** people. Each group will work as an entity to produce one ﬁnal result for the project. Each group should work independently-NO collaboration between groups is allowed.
  
@@ -19,7 +20,7 @@
 
 
 
-## Final presentation:
+## Documentation:
 
   
 
@@ -32,7 +33,6 @@
   
 
 ### Data:
-*Where did you got it? Size? Format?*
 We got the data from an iTunes library export of data seen in the songs.csv file.
 It is 48.8KB of data.
 **Data Sample:**
@@ -52,8 +52,23 @@ It is 48.8KB of data.
 |Screaming Underwater                         |2:26|Screaming Underwater - Single                    |Pop        |9/10/2021   |Alex Warren                  |
 |Just Drive                                   |2:28|Just Drive - Single                              |Country    |8/6/2021    |Erin Kinsey                  |
 
-  
 
+We had to clean this file by removing all commas and removing any doublequotes ````"```` as these were escaping when inserting into the database.
+
+We then wrote python code to loop over each row in the CSV and create individule Albums, Artists, and Song objects and relationships that were then inserted into the database.
+
+
+You can see this in the ```` dataimporter.py````  code file.
+
+To run this python file:
+* Install python3.
+* Install SQLAlchemy:
+	* ```` pip install sqlalchemy````
+* Run the program:
+	* ```` python dataimporter.py````
+	*be sure to have the songs.csv file in the same directory*
+	**Note: this python file drops all rows in Songs/Albums/and Artists table as it builds its own system for ids**
+  
 ### Your approaches:
 
   
